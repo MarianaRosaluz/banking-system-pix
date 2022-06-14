@@ -6,10 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="banking-system-pix-data-provider" />
         <module name="business" />
         <module name="banking-system-transfer-data-provider" />
         <module name="banking-system-transfer-api" />
         <module name="banking-system-transfer-business" />
+        <module name="banking-system-pix-worker" />
+        <module name="banking-system-pix-business" />
+        <module name="banking-system-pix-api" />
         <module name="data-provider" />
         <module name="api" />
         <module name="worker" />
@@ -24,6 +28,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api" options="-parameters" />
       <module name="banking-system" options="-parameters" />
+      <module name="banking-system-pix-api" options="-parameters" />
+      <module name="banking-system-pix-business" options="-parameters" />
+      <module name="banking-system-pix-data-provider" options="-parameters" />
+      <module name="banking-system-pix-worker" options="-parameters" />
       <module name="banking-system-transfer-api" options="-parameters" />
       <module name="banking-system-transfer-business" options="-parameters" />
       <module name="banking-system-transfer-data-provider" options="-parameters" />

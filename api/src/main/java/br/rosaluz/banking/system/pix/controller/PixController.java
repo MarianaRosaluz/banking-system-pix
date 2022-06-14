@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(value = "/api/banking/system/pix", produces="application/json")
 @Api(value="API REST Banking System")
@@ -28,18 +29,12 @@ public class PixController {
 
     @PostMapping()
     public ResponseEntity<?> pix(@RequestBody @Valid PixDTO pixDTO )throws Exception {
-        try {
 
             var pix = conversionService.convert(pixDTO, Pix.class);
-            Boolean completed = pixService.pix(pix);
-            if (completed) {
+             pixService.pix(pix);
 
                 return ResponseEntity.ok().build();
-            } else throw new Exception("O pix não foi realizada");
 
-        }catch (Exception e){
-            return ResponseEntity.badRequest().build();
-        }
 
     }
     @GetMapping("status/{pixId}")

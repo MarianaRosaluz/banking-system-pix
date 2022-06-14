@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface PixService {
 
-    public Pix save(Pix pix);
-    public  boolean pix(Pix pixDTO);
-    public Optional<Pix> findById(long pixId);
+     Pix save(Pix pix);
+      void pix(Pix pixDTO);
+     Optional<Pix> findById(long pixId);
 }
